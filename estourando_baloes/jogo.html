@@ -1,0 +1,92 @@
+<!DOCTYPE HTML>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+
+		<title>Estourando balões</title>
+
+		<script src="jogo.js"></script>
+
+		<style type="text/css">
+
+		* {
+			padding: 0;
+			margin: 0;
+		}
+
+		html, body {
+			width: 100%;
+			height: 100%;
+		}
+			
+		#page {
+			width: 743px;
+			height: 500px;
+			margin: 10% auto;
+			-webkit-box-shadow: -1px 6px 13px 0px rgba(0,0,0,0.75);
+			-moz-box-shadow: -1px 6px 13px 0px rgba(0,0,0,0.75);
+			box-shadow: -1px 6px 13px 0px rgba(0,0,0,0.75);
+		}
+
+		#tela_end_game {
+			visibility: hidden;
+			display: table;
+			text-align: center; 
+			position: absolute; 
+			z-index: 9999; 
+			background: #fff; 
+			width: 600px; 
+			height: 500px;
+		}
+		#tela_end_game_text {
+			font-size: 40px;
+			vertical-align: middle;
+			display: table-cell;
+		}
+
+		</style>
+
+	</head>
+
+	<body onload="iniciarJogo()">
+		<div id="page">
+			<div id="dados" align="center" style="width: auto; height: 500px; float: left; border: 1px solid black;">
+				<table style="margin-top: 100px;">
+					<tr>
+						<td><img src="imagens/balao_azul_grande.png"></td>
+						<td><span style="font-size: 40px;" id="baloes_inteiros"></span></td>
+					</tr>
+					
+				</table>
+
+				<table>
+					<tr>
+						<td><img src="imagens/balao_azul_grande_estourado.png"></td>
+						<td><span style="font-size: 40px;" id="baloes_estourados"></span></td>
+					</tr>
+					
+				</table>
+
+				<table style="width: 140px; height: 132px; text-align: center;">
+					<tr>
+						<td style="background: url('imagens/cronometro.png')">
+							<span style="color: red; font-size: 30px;" id="cronometro"></span>
+						</td>
+					</tr>
+					
+				</table>
+			</div>
+
+			<div align="center" id="cenario" style="border: 1px solid black; border-left: none; float: left; width: 600px; height: 500px; background: url('imagens/cenario.png'); background-position: bottom; text-align: center;">
+				<div id="tela_end_game">
+					<div id="tela_end_game_text">
+						<!--texto vitoria ou derrota-->
+					</div>
+				</div>
+			
+			</div>
+		</div>
+
+	</body>
+	
+</html>

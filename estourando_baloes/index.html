@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+
+		<title>Estourando balões</title>
+
+		<script language='Javascript'>
+
+			function iniciarJogo() {
+				
+				var dificuldade = document.getElementById('dificuldade').value;
+				window.location.href = 'jogo.html?' + dificuldade;
+			}
+
+		</script>
+
+		<style type="text/css">
+			
+			#game {
+				margin: 15% auto; 
+				width: 370px; 
+				height: 220px; 
+				border: 1px solid black; 
+				text-align: center; 
+				padding: 50px 0 0 0; 
+				-webkit-box-shadow: -1px 6px 13px 0px rgba(0,0,0,0.75);
+				-moz-box-shadow: -1px 6px 13px 0px rgba(0,0,0,0.75);
+				box-shadow: -1px 6px 13px 0px rgba(0,0,0,0.75);
+			}
+
+		</style>
+	</head>
+
+	<body>
+		<div id="game">
+			<p>
+				<b>Dificuldade:</b>
+				<select id="dificuldade">
+					<option value="1">Fácil</option>
+					<option value="2">Normal</option>
+					<option value="3">Difícil</option>
+				</select>
+			</p>
+
+			<div>
+				<img onclick="iniciarJogo()" src="imagens/iniciar.png">
+			</div>
+		</div>
+
+	</body>
+
+</html>
